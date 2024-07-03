@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'farah2501', // Usually your GitHub org/user name.
+  projectName: 'mywebsite', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,7 +28,15 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'my'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      my: {
+        label: 'Bahasa Melayu',
+      },
+    }
   },
 
   markdown: {
@@ -67,6 +75,10 @@ const config: Config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        gtag: {
+          trackingID:'G-K07ZCT5X4N',
+          anonymizeIP: true,
         },
         sitemap: {
           lastmod: 'date',
@@ -134,9 +146,13 @@ const config: Config = {
           position: 'left',
           label: 'Markdown',
         },
+        // {
+        //   href: 'https://github.com/facebook/docusaurus',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          type: 'localeDropdown',
           position: 'right',
         },
       ],
@@ -153,7 +169,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/single-page',
+              to: '/single-page',
             },
           ],
         },
