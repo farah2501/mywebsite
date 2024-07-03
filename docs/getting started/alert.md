@@ -1,11 +1,19 @@
 ---
-title: Alert or Admonitions
+title: Alert and Admonitions
 sidebar_position: 5
 ---
 
-:::note
+import Tabs from '@theme/Tabs';
 
-Heres some **information** with _Markdown_ styling
+import TabItem from '@theme/TabItem';
+
+:::tip[Use tabs in admonitions]
+
+<Tabs>
+  <TabItem value="apple" label="Apple">This is an apple 🍎</TabItem>
+  <TabItem value="orange" label="Orange">This is an orange 🍊</TabItem>
+  <TabItem value="banana" label="Banana">This is a banana 🍌</TabItem>
+</Tabs>
 
 :::
 
