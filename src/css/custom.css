@@ -1,0 +1,45 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import "https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css";
+
+:root {
+  --ifm-color-primary: #857b2e;
+  --ifm-color-primary-dark: #786a29;
+  --ifm-color-primary-darker: #627225;
+  --ifm-color-primary-darkest: #5d4620;
+  --ifm-color-primary-light: #926c33;
+  --ifm-color-primary-lighter: #995b35;
+  --ifm-color-primary-lightest: #a7ad3c;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.yellow-text {
+  color: #b8d42b;
+}
+
+.simple-class {
+  color: black;
+  background-color: #926c33;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
