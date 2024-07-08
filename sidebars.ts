@@ -73,6 +73,7 @@ const sidebars = {
         'Markdown/TOC', 
         'Markdown/diagrams',
         'Markdown/math',
+        'Markdown/live-codeblock',
       ]
     },
   ]
