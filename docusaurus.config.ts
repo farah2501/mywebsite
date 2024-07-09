@@ -39,6 +39,21 @@ const config: Config = {
     }
   },
 
+  // webpack: {
+  //   configure: (webpackConfig, { env, paths }) => {
+  //     webpackConfig.resolve.fallback = {
+  //       ...webpackConfig.resolve.fallback,
+  //       "os": require.resolve("os-browserify/browser"),
+  //       "path": require.resolve("path-browserify"),
+  //       "zlib": require.resolve("browserify-zlib"),
+  //       "http": require.resolve("stream-http"),
+  //       "https": require.resolve("https-browserify"),
+  //       "fs": false, // If 'fs' is used and you need a polyfill, consider using 'browserify-fs'
+  //     };
+  //     return webpackConfig;
+  //   },
+  // },
+
   markdown: {
     mermaid: true,
   },
@@ -77,10 +92,7 @@ const config: Config = {
         },
         theme: {
           customCss: './src/css/custom.css',
-        },
-        gtag: {
-          trackingID:'G-K07ZCT5X4N',
-          anonymizeIP: true,
+      
         },
         sitemap: {
           lastmod: 'date',
@@ -105,11 +117,13 @@ const config: Config = {
       integrity:
         'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
       crossorigin: 'anonymous',
-    },
+    }
   ],
 
-  themes: [ '@docusaurus/theme-mermaid'],
-
+  themes: [ 
+    '@docusaurus/theme-mermaid',
+    'docusaurus-theme-search-typesense'
+  ],
 
   themeConfig: {
     // Replace with your project's social card
@@ -163,6 +177,27 @@ const config: Config = {
       theme: {light: 'neutral', dark: 'forest'},
       //options: {maxTextSize:50,},
     },
+     typesense: { 
+      // 
+      // Replace this with the name of your index/collection. 
+      // It should match the "index_name" entry in  
+      // scraper config file. 
+      // 
+
+      typesenseCollectionName: 'ComprehensiveCollection', 
+
+      typesenseServerConfig: { 
+
+        nodes: [ 
+          { 
+            host: 'localhost', 
+            port: 8108, 
+            protocol: 'http', 
+          }, 
+        ], 
+        apiKey: 'DWRsY282BuHnGe53lsm8iym0AT7VvG8Msz4XQT7kPaKOoakc', 
+      },
+    },
     footer: {
       style: 'dark',
       links: [
@@ -214,9 +249,7 @@ const config: Config = {
     },
   
   } satisfies Preset.ThemeConfig,
-
-  //style math
-  
+  plugins: []
 };
 
 export default config;
